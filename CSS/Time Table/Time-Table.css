@@ -1,0 +1,78 @@
+table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(193, 151, 241);
+        }
+
+        body {
+            font-family: 'Baloo Da 2', cursive;
+            background: linear-gradient(to top right,
+                    #FF5733,
+                    /* Darker Red */
+                    #FFD54F,
+                    /* Pastel Yellow */
+                    #81C784,
+                    /* Soft Green */
+                    #64B5F6,
+                    /* Sky Blue */
+                    #7986CB,
+                    /* Light Purple */
+                    #E57373,
+                    /* Light Salmon */
+                    #FF5733
+                    /* Darker Red - Repeat the first color to complete the loop */
+                );
+            background-size: 200% 100%;
+            /* Double the width of the gradient */
+            animation: gradientAnimation 8s ease-in-out infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0px;
+        }
+
+        #Table1 {
+            display: flex;
+            flex-direction: column;
+            background-color: #a4d6ff;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        @keyframes gradientAnimation {
+
+            0%,
+            100% {
+                background-position: 0 0;
+                /* Start and end position at bottom left corner */
+            }
+
+            50% {
+                background-position: 100% 0;
+                /* Middle position at top right corner */
+            }
+        }
+
+        #Div2 {
+            height: 50px;
+            font-size: 35px;
+            border: 1px solid black;
+            margin: 10px;
+            width: 95%;
+            font-family: "Sofia", sans-serif;
+            border-radius: 12px;
+            text-align: center;
+            background-color: rgb(185, 170, 170);
+        }
