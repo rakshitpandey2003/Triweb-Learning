@@ -1,0 +1,1 @@
+ throw new error("error hogya hh");
