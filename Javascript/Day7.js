@@ -6,8 +6,8 @@ console.log(x,y,z);
 x= 1e6;
 console.log(x);
 
-x=1;
-if(!Number.isNaN(x)) console.log("not number");
+x=76;
+if(isNaN(x)) console.log("not number");
 
 console.log(Math.random());
 console.log(Math.round(Math.random()*10,1));

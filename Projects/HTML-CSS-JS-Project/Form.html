@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bricolage+Grotesque:opsz,wght@10..48,700&family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+</head>
+<body >
+    <script src="Form.js"></script>
+        <div id="DivMain">
+            <img src="hello2.jpeg" class="Img1">
+            <div id="Div1">
+                <div id="Div3">
+                    <img src="hello.jpeg" class="Img2">
+                    <div id="Div5">
+                        <span class="Span1" style="display: block; margin-bottom: -0.6em;">Resume</span>
+  <span class="Span1" style="display: block;">Form.</span>
+  <span style="display: block; margin-bottom:40px;">This is Joseph Moreuno , for more career tips and to work with me, fill your details and resume.</span>
+  <span style="display: block; font-size: larger;">Register with your social media account</span>
+  <!-- Facebook -->
+  <a class="btn btn-primary" style="background-color: #3b5998; box-shadow: 5px 10px 18px #5375be; border-radius: 18px; border: none;" href="#!" role="button"
+    >&nbsp;<i class="fab fa-facebook-f "></i
+  >&nbsp;</a>
+<a class="btn btn-primary" style="background-color: #ac2bac; box-shadow: 5px 10px 18px #aa33aa; border-radius: 18px; border: none;" href="#!" role="button"
+  ><i class="fab fa-instagram "></i
+></a>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a class="btn btn-primary" style="background-color: #55acee; box-shadow: 5px 10px 18px #629fcd;border: none; border-radius: 20px; " href="#!" role="button"
+  ><i class="fab fa-twitter me-2"></i
+>Register with Twitter</a>
+
+                    </div>
+                </div>
+                <div id="Div4" style="width: 50%;">
+                    <div id="Div6"><form name="MyForm" action="" onsubmit="return Validate() ">
+                        <span style="color: black; display: block; font-size: 30px; font-family: 'Noto Sans JP', sans-serif; margin-bottom: 15px;">Register</span>
+                        <div>
+                            <input type="text" id="FirstName" name="fname" placeholder="First Name" required></div>
+                        <div>
+                            <input type="text" id="LastName" name="lname" placeholder="Last Name" required></div>
+                        <div>
+                            <input type="email" id="Email" name="email" placeholder="Email" required></div>
+                        <div>
+                            <input type="tel" id="Contact" name="contact" placeholder="Contact"></div>
+                        <div>
+                            <input type="date" name="date" id="DateOfBirth" required></div>
+                        <div>
+                            <input type="number" name="age" id="Age" placeholder="Age"></div>
+                        <div>
+                            <input type="radio" id="Gender" name="gender" value="male">Male
+                            <input type="radio" name="gender" value="female">Female
+                            <input type="radio" name="gender" value="others">Others</div>
+                            <div class="custom-file">
+                                <input type="file" name="resume" id="File">
+                                <label for="File">Choose File</label>
+                            </div>
+                        <div><input type="submit" value="Submit"> </div>
+                    </form></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
