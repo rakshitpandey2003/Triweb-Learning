@@ -1,0 +1,26 @@
+//limit clause
+select * from members where project_id=5 limit 2
+
+//MAX() MIN()
+select MAX(salary) from head
+select MIN(salary) from head
+
+//COUNT()
+select count(id) as numberOfheads from head
+
+//AVG()
+select avg(salary) as averageSalary from head
+
+//SUM()
+select sum(salary) as totalSalary from head
+
+//LIKE operator
+select * from members where member_name like 'A%'
+select * from members where member_name like 'R_hit'
+
+//IN and NOT IN operator
+select * from members where project_id in (5,6)
+select MAX(salary) from members where salary not in(select MAX(salary) from head)
+
+//BETWEEN operator
+select * from head where salary between 10000 and 40000

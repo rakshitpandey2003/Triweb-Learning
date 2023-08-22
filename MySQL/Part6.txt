@@ -1,0 +1,17 @@
+//LEFT JOIN
+select c.project_name, t.head_name as project_head
+from projects c
+left join head t 
+on c.head_id=t.id
+
+//RIGHT JOIN
+select c.project_name, t.head_name as project_head
+from projects c
+right join head t 
+on c.head_id=t.id
+
+//INNER JOIN
+select c.project_name, t.head_name as project_head
+from projects c
+inner join head t 
+on c.head_id=t.id

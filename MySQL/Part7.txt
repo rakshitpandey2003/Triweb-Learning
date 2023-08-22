@@ -1,0 +1,28 @@
+//UNION
+select member_name from members
+union
+select head_name from head
+
+//GROUP BY
+select project_id ,count(*) as numberOfMembers from members
+group by project_id 
+order by numberOfMembers desc
+
+//HAVING clause
+select project_id ,count(*) as numberOfMembers from members
+group by project_id 
+having numberOfMembers>1
+
+//insert in other table
+create table head_dup(
+    id int,
+    head_name varchar(20),
+    mobile varchar(10),
+    salary varchar(30)
+)
+
+insert into head_dup(id,head_name,mobile,salary)
+select id,head_name,mobile,salary from head
+where id=2
+
+select * from head_dup

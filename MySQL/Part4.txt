@@ -1,0 +1,12 @@
+
+select * from members where project_id=5 or project_id=2
+select * from members where project_id=5 and mobile='567'
+select * from members where project_id<>5 
+
+//data in ascending order
+select * from members where project_id=5 or project_id=2
+order by project_id
+
+//data in descending order
+select * from members where project_id=5 or project_id=6
+order by project_id desc

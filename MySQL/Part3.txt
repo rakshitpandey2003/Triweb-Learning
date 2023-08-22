@@ -1,0 +1,10 @@
+//insert into tables
+insert into head(head_name, mobile, salary) values('Sachin','1234',50000)
+
+//insert multiple values
+insert into head values(1,'Sachin','1234',50000),(2,'Vijay','2345',60000),(3,'Ajay','3456',20000)
+insert into projects values(1,'project 1',1),(2,'project 2',3),(3,'project 3',1),(4,'project 4',2),(5,'project 5',3);
+insert into members values(1,'Rick','1','345'),(2,'Grim','2','456'),(3,'Prick','5','567'),(4,'Rohit','4','678'),(5,'Alex','5','789')
+
+//update data
+update projects set project_name='project A' where id=1
