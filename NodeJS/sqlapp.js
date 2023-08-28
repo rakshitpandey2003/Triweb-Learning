@@ -8,4 +8,4 @@ app.get('/', (req, res) => {
     res.send("this is try");
 });
 app.use('/user',userRoute);
-app.listen(3000);
+app.listen(3001);
