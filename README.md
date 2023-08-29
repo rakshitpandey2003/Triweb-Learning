@@ -45,6 +45,8 @@ Here, traverse the corridors of the **Triweb-Learning** fortress, wherein the tr
 
   - 📂 **ES6**
     - Diving into the marvels of modern ES6.
+  - 📂 **NodeJS**
+    - Contains practice files of Node.js.
 ## A Symphony of HTML
 
 Within the realm of `HTML`, embark on odysseys of creation. Encounter projects such as:
@@ -89,6 +91,13 @@ The `ES6` realm weaves a tapestry with the threads of modern JavaScript concepts
 - `math.js`: A canvas adorned with the artistry of novel mathematical methods.
 - `spread.js`: The eloquence of the spread operator, woven into code's fabric.
 - `propertyShorthand.js`: The shorthand symphony for expressing object beauty.
+
+## NodeJS Practice
+In the `NodeJS` directory, I've practiced creating routes, handling requests, connecting to databases and performing CRUD operations. 
+I've used Postman - a popular collaboration platform for API development that simplifies the process of building, testing, and documenting APIs. Some of the examples include:
+
+- `calculator.js`: Demonstrating the methods to create routers and controllers and perform mathematical operations.
+- `user.js`: Demonstrating the CRUD operations performed with the help of sequelize library.
 
 Voyage through each chapter, unearthing the troves of code and projects nurtured!
 
