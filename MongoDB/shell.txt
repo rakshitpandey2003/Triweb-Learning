@@ -1,0 +1,11 @@
+//to see all available databases
+show dbs
+
+//to create a database or switch to a database
+use <database_name>
+
+//to create a collection
+db.createCollection(<collection_name>)
+
+//to delete a database
+db.dropDatabase()
