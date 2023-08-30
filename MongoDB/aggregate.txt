@@ -1,0 +1,19 @@
+//create database 
+use mydb
+
+//insert values in collections
+db.customer.insertOne({name:"Aastha"})
+
+db.books.insertMany([{bname:"Maths",price:400},{bname:"English",price:500},{bname:"Hindi",price:300}])
+
+//build connection between the collections
+db.customer.updateOne({_id: ObjectId("64eee691077ddbaeb4262ffe")},{$set:{favBooks:[ObjectId("64eee738077ddbaeb4262fff"),ObjectId("64eee738077ddbaeb4263000")]}})
+
+db.customer.insertOne({name:"Agrim",favBooks:[ObjectId("64eee738077ddbaeb4263000")]})
+
+//check all records
+db.customer.find()
+
+//connection with book data using aggregate and lookup
+db.customer.aggregate([{$lookup:{from:"books",localField:"favBooks",foreignField:"_id",as:"FavouriteBookData"}}])
+
