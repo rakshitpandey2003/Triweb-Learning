@@ -1,0 +1,14 @@
+//find book with a given price
+db.books.find({price:400})
+
+//find a book with price greater than given price
+db.books.find({price:{$gt:300}})
+
+//find a book with price less than given price
+db.books.find({price:{$lt:400}})
+
+//find a book with price in given price values
+db.books.find({price:{$in:[300,500]}})
+
+//find a book with price not in given price values
+db.books.find({price:{$nin:[300,500]}})
