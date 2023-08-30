@@ -1,0 +1,15 @@
+//INSERT
+db.col.insertOne({name:"Aastha",mobile:1234})
+db.col.insertMany([{name:"Agrim",mobile:2345},{name:"Arjun",email:"arjun@gmail.com",location:"Dehradun"}])
+
+//to display all records
+db.col.find()
+
+//to display a particular record
+db.col.find({name:"Aastha"})
+
+//UPDATE
+db.col.updateOne({name:"Arjun"},{$set:{location:"India"}})
+
+//DELETE
+db.col.deleteOne({name:"Agrim"})
