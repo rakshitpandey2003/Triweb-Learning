@@ -12,7 +12,12 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build":"tsc --noEmitOnError",
-    "start": "node ./dist/app.js"
+    "build": "tsc --noEmitOnError",
+    "start": "node ./dist/app.js",
+    "start:ts":"yarn ts-node ./src/app.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
   }
 }
