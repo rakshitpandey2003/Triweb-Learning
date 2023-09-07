@@ -82,4 +82,29 @@ const updateUser=async (req:Request, res:Response)=>{
     }
 }
 
-export {registerUser, getUser, updateUser};
+const loginUser=async (req:Request,res:Response)=>{
+    let resp:ReturnResponse;
+    try {
+        const email=req.body.email;
+        const password=req.body.password;
+
+        const user=await User.findOne({email});
+
+        if(user){
+            const status=await bcrypt.compare(password,user.password);
+            if(status){
+                resp={status:"success", message:"Logged In", data:{}};
+            }
+            else{
+                resp={status:"error", message:"Wrong Credentials", data:{}};
+            }
+            res.send(resp);
+        }
+
+    } catch (error) {
+        console.log(error);
+        resp={status:"error",message:"Something went wrong",data:{}};
+        res.status(500).send(resp);
+    }
+}
+export {registerUser, getUser, updateUser, loginUser};
