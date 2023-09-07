@@ -37,4 +37,23 @@ const registerUser = async (req: Request, res: Response) => {
     res.send("Done");
 }
 
-export { registerUser };
+const getUser=async (req:Request,res:Response)=>{
+    let resp:ReturnResponse;
+    try {
+        const userId=req.params.userId;
+        const user= await User.findById(userId, {name:1, email:1 });
+        if(!user){
+            resp={status:"error",message:"No user found",data:{}};
+            res.send(resp);
+        }
+        else{
+            resp={status:"success", message:"User Found", data:{user:user}};
+            res.send(resp);
+        }
+    } catch (error) {
+        resp={status:"error",message:"Something went wrong",data:{}};
+        res.status(500).send(resp);
+    }
+}
+
+export {registerUser, getUser};

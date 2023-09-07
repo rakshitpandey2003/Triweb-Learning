@@ -33,12 +33,13 @@ const userSchema = new mongoose_1.Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        index: true
     },
     password: {
         type: String,
         required: true
     }
-});
+}, { timestamps: true });
 const User = mongoose_1.default.model('User', userSchema);
 exports.default = User;
