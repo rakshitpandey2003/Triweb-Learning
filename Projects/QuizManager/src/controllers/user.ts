@@ -90,13 +90,19 @@ const loginUser=async (req:Request,res:Response)=>{
 
         const user=await User.findOne({email});
 
-        if(user){
+        if(!user){
+            resp={status:"error", message:"User Not Found", data:{}};
+            res.status(401).send(resp);
+        }
+        else{
             const status=await bcrypt.compare(password,user.password);
             if(status){
                 resp={status:"success", message:"Logged In", data:{}};
+                res.status(200).send(resp);
             }
             else{
                 resp={status:"error", message:"Wrong Credentials", data:{}};
+                res.status(401).send(resp);
             }
             res.send(resp);
         }
