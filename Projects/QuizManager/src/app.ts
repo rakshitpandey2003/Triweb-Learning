@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import express from "express";
 import UserRoute from "./routes/user";
+import authRoute from './routes/auth';
 const app = express();
 
 const connectionstring = process.env.CONNECTION_STRING || "";
@@ -12,6 +13,7 @@ app.get("/",(req , res)=>{
 });
 
 app.use("/user" , UserRoute);
+app.use('/auth',authRoute);
 const mongooseOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
