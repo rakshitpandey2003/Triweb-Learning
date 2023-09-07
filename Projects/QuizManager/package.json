@@ -14,7 +14,8 @@
   "scripts": {
     "build": "tsc --noEmitOnError",
     "start": "node ./dist/app.js",
-    "start:ts":"yarn ts-node ./src/app.ts"
+    "start:ts":"yarn ts-node ./src/app.ts",
+    "start:dev":"nodemon ./src/app.ts"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
