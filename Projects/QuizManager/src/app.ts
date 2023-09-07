@@ -8,6 +8,14 @@ const connectionstring = process.env.CONNECTION_STRING || "";
 
 app.use(express.json());
 
+declare global{
+    namespace Express{
+        interface Request{
+            userId:String;
+        }
+    }
+}
+
 app.get("/",(req , res)=>{
     res.send("hello");
 });
