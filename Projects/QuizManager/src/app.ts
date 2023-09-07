@@ -3,7 +3,7 @@ import express from "express";
 import UserRoute from "./routes/user";
 const app = express();
 
-const connectionstring = "mongodb+srv://Myuser:raklovaas@mycluster.ywsim2g.mongodb.net/quizdb?retryWrites=true&w=majority";
+const connectionstring = process.env.CONNECTION_STRING || "";
 
 app.use(express.json());
 
@@ -19,7 +19,7 @@ const mongooseOptions = {
 
 mongoose.connect(connectionstring, mongooseOptions as mongoose.ConnectOptions)
     .then(() => {
-        app.listen(3000, () => {
+        app.listen(process.env.PORT, () => {
             console.log('Server Connected');
         });
     })

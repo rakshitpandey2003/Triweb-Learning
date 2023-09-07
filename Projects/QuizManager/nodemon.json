@@ -1,0 +1,11 @@
+{
+    "env": {
+        "CONNECTION_STRING": "mongodb+srv://Myuser:raklovaas@mycluster.ywsim2g.mongodb.net/quizdb?retryWrites=true&w=majority",
+        "PORT": 3000
+    },
+    "watch": [
+        "src"
+    ],
+    "ext": "ts,json",
+    "exec": "ts-node ./src/app.ts"
+}
