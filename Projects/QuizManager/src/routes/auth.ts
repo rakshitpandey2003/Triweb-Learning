@@ -24,7 +24,19 @@ router.post('/', [
                     return Promise.reject(err);
                 })
         })
-        .normalizeEmail()
+        .normalizeEmail(),
+    body('password')
+        .trim()
+        .isLength({min:5})
+        .withMessage("Password length should be atleast 5 characters"),
+    body('confirm_password')
+        .trim()
+        .custom((value,{req})=>{
+            if(value!=req.body.password){
+                return Promise.reject("Password mismatch");
+            }
+            return true;
+        })
 ], registerUser);
 router.post('/login',loginUser);
 export default router;
