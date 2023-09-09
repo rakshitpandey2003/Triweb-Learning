@@ -7,7 +7,7 @@ import ProjectError from "../helper/error";
 interface ReturnResponse{
     status:"success" | "error",
     message:String,
-    data:{}
+    data:{} | []
 }
 
 const registerUser = async (req: Request, res: Response , next:NextFunction) => {
