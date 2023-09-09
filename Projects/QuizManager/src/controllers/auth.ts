@@ -47,8 +47,9 @@ const loginUser=async (req:Request,res:Response , next:NextFunction)=>{
         const user=await User.findOne({email});
 
         if(!user){
-            resp={status:"error", message:"User Not Found", data:{}};
-            res.status(401).send(resp);
+            const err=new ProjectError("User Not Found");
+            err.statusCode=401;
+            throw err;
         }
         else{
             const status=await bcrypt.compare(password,user.password);
@@ -58,8 +59,9 @@ const loginUser=async (req:Request,res:Response , next:NextFunction)=>{
                 res.status(200).send(resp);
             }
             else{
-                resp={status:"error", message:"Wrong Credentials", data:{}};
-                res.status(401).send(resp);
+                const err=new ProjectError("Wrong Credentials");
+                err.statusCode=401;
+                throw err;
             }
         }
 

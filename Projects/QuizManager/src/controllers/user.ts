@@ -21,12 +21,13 @@ const getUser=async (req:Request,res:Response , next:NextFunction)=>{
         const userId=req.params.userId;
         const user= await User.findById(userId, {name:1, email:1 });
         if(!user){
-            resp={status:"error",message:"No user found",data:{}};
-            res.send(resp);
+            const err=new ProjectError("User Not Found");
+            err.statusCode=401;
+            throw err;
         }
         else{
             resp={status:"success", message:"User Found", data:{user:user}};
-            res.send(resp);
+            res.status(200).send(resp);
         }
     } catch (error) {
         next(error);
@@ -44,8 +45,9 @@ const updateUser=async (req:Request, res:Response , next:NextFunction)=>{
         const userId=req.body._id;
         const user=await User.findById(userId);
         if(!user){
-            resp={status:"error",message:"No user found",data:{}};
-            res.send(resp);
+            const err=new ProjectError("User Not Found");
+            err.statusCode=401;
+            throw err;
         }
         else{
             user.name=req.body.name;
