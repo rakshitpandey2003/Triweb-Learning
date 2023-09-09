@@ -3,6 +3,7 @@ import User from '../models/user';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import ProjectError from "../helper/error";
+import { validationResult } from "express-validator/src/validation-result";
 
 interface ReturnResponse{
     status:"success" | "error",
@@ -13,6 +14,14 @@ interface ReturnResponse{
 const registerUser = async (req: Request, res: Response , next:NextFunction) => {
     let resp:ReturnResponse;
     try {
+        const validationError=validationResult(req);
+        if(!validationError.isEmpty()){
+            const err=new ProjectError("Validation Failed");
+            err.statusCode=422; 
+            err.data=validationError.array();
+            throw err;
+        }
+
         const name=req.body.name;
         const email=req.body.email;
         const password=await bcrypt.hash(req.body.password,12); 
@@ -70,4 +79,7 @@ const loginUser=async (req:Request,res:Response , next:NextFunction)=>{
     }
 }
 
-export {registerUser , loginUser};
+const isUserExist=(email:String):Boolean=>{
+    return true;
+}
+export {registerUser, loginUser, isUserExist};
