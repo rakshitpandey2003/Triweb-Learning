@@ -13,9 +13,9 @@ router.post('/', [
     body('email')
         .trim()
         .isEmail()
-        .custom(emailId=>{
+        .custom((emailId:String)=>{
             return isUserExist(emailId)
-                .then((status)=>{
+            .then((status:Boolean)=>{
                     if(status){
                         return Promise.reject("User Already Exists");
                     }
@@ -31,7 +31,7 @@ router.post('/', [
         .withMessage("Password length should be atleast 5 characters"),
     body('confirm_password')
         .trim()
-        .custom((value,{req})=>{
+        .custom((value:String,{req})=>{
             if(value!=req.body.password){
                 return Promise.reject("Password mismatch");
             }
