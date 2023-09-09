@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import User from '../models/user';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import ProjectError from "../helper/error";
 
 interface ReturnResponse{
     status:"success" | "error",

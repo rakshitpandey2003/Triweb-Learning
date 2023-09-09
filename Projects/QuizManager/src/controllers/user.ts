@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import User from '../models/user';
+import ProjectError from "../helper/error";
 
 interface ReturnResponse{
     status:"success" | "error",
@@ -12,7 +13,9 @@ const getUser=async (req:Request,res:Response , next:NextFunction)=>{
     console.log(req.userId);
     try {
         if(req.userId != req.params.userId){
-            const err = new Error("You are not authorized");
+            const err=new ProjectError("You are not authorized");
+            err.statusCode=401;
+            err.data={hi:"it's error"};
             throw err;
         }
         const userId=req.params.userId;
@@ -34,7 +37,8 @@ const updateUser=async (req:Request, res:Response , next:NextFunction)=>{
     let resp:ReturnResponse;
     try {
         if(req.userId != req.body._id){
-            const err = new Error("You are not authorized");
+            const err=new ProjectError("You are not authorized");
+            err.statusCode=401;
             throw err;
         }
         const userId=req.body._id;
