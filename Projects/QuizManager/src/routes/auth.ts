@@ -14,10 +14,17 @@ router.post('/', [
         .trim()
         .isEmail()
         .custom(emailId=>{
-            return isUserExist(emailId);
+            return isUserExist(emailId)
+                .then((status)=>{
+                    if(status){
+                        return Promise.reject("User Already Exists");
+                    }
+                })
+                .catch((err)=>{
+                    return Promise.reject(err);
+                })
         })
         .normalizeEmail()
-        .withMessage("Please enter a valid email"),
 ], registerUser);
 router.post('/login',loginUser);
 export default router;

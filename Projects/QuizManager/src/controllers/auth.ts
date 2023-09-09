@@ -79,7 +79,12 @@ const loginUser=async (req:Request,res:Response , next:NextFunction)=>{
     }
 }
 
-const isUserExist=(email:String):Boolean=>{
+const isUserExist=async (email:String)=>{
+    const user=await User.findOne({email});
+
+    if(!user){
+        return false;
+    }
     return true;
 }
 export {registerUser, loginUser, isUserExist};
