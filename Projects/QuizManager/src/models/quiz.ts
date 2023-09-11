@@ -9,16 +9,17 @@ const quizSchema=new schema(
             required:true,
             unique:true
         },
-        question_list:[
+        questions_list:[
             {
                 question_number:Number,
                 question:String,
                 options:{}
             }
         ],
-        answer:{},
+        answers:{},
         created_by:{
-            type:mongoose.Types.ObjectId
+            type:mongoose.Types.ObjectId,
+            required:true
         },
         is_published:{
             type:Boolean,

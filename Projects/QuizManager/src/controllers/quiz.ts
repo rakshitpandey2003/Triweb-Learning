@@ -1,14 +1,45 @@
-import { Request, Response } from "express"
+import { Request, Response , NextFunction } from "express"
 import Quiz from "../models/quiz";
+import ProjectError from "../helper/error";
 
-const createQuiz=async (req:Request, res:Response) =>{
-    const quiz=new Quiz(req.body);
-    await quiz.save();
-    res.send(req.body);
+interface ReturnResponse{
+    status:"success" | "error",
+    message:String,
+    data:{} | []
 }
 
-const getQuiz=(req:Request, res:Response) =>{
-    res.send(req.params.quizId);
+const createQuiz=async (req:Request, res:Response, next:NextFunction) =>{
+    try {
+        const created_by=req.userId;
+        const name=req.body.name;
+        const questions_list=req.body.questions_list;
+        const answers=req.body.answers;
+
+        const quiz=new Quiz({name, questions_list, answers, created_by});
+        const result =await quiz.save();
+        const resp:ReturnResponse={status:"success", message:"Quiz created successfully", data:{quizId:result._id}};
+        res.status(201).send(resp);
+
+    } catch (error) {
+        next(error);
+    }
+}
+
+const getQuiz=async (req:Request, res:Response, next:NextFunction) =>{
+    try {
+        const quizId=req.params.quizId;
+        const quiz=await Quiz.findById(quizId);
+        if(!quiz){
+            const err=new ProjectError("Quiz not found");
+            err.statusCode=404;
+            throw err;
+        }
+        const resp:ReturnResponse={status:"success", message:"Quiz retrieved successfully", data:{quiz}};
+        res.status(201).send(resp);
+
+    } catch (error) {
+        next(error);
+    }
 }
 
 const updateQuiz=(req:Request, res:Response) =>{
