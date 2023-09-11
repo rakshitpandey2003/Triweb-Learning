@@ -4,12 +4,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import ProjectError from "../helper/error";
 import { validationResult } from "express-validator/src/validation-result";
-
-interface ReturnResponse{
-    status:"success" | "error",
-    message:String,
-    data:{} | []
-}
+import { ReturnResponse } from "../utils/interfaces";
 
 const registerUser = async (req: Request, res: Response , next:NextFunction) => {
     let resp:ReturnResponse;
