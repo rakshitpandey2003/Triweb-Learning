@@ -1,6 +1,9 @@
 import { Request, Response } from "express"
+import Quiz from "../models/quiz";
 
-const createQuiz=(req:Request, res:Response) =>{
+const createQuiz=async (req:Request, res:Response) =>{
+    const quiz=new Quiz(req.body);
+    await quiz.save();
     res.send(req.body);
 }
 
