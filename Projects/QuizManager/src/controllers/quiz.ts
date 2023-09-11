@@ -28,7 +28,7 @@ const createQuiz=async (req:Request, res:Response, next:NextFunction) =>{
 const getQuiz=async (req:Request, res:Response, next:NextFunction) =>{
     try {
         const quizId=req.params.quizId;
-        const quiz=await Quiz.findById(quizId);
+        const quiz=await Quiz.findById(quizId,{name:1, questions_list:1, answers:1});
         if(!quiz){
             const err=new ProjectError("Quiz not found");
             err.statusCode=404;
