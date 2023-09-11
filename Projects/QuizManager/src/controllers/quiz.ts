@@ -76,7 +76,17 @@ const deleteQuiz=async (req:Request, res:Response, next:NextFunction) =>{
 
 const publishQuiz=async (req:Request, res:Response, next:NextFunction) =>{
     try {
-        const quizId=req.params.quizId;
+        const quizId=req.body.quizId;
+        const quiz=await Quiz.findById(quizId);
+        if(!quiz){
+            const err=new ProjectError("Quiz not found");
+            err.statusCode=404;
+            throw err;
+        }
+        quiz.is_published=true;
+        await quiz.save();
+        const resp:ReturnResponse={status:"success", message:"Quiz published", data:{}};
+        res.status(200).send(resp);
     }
      catch (error) {
         next(error);
