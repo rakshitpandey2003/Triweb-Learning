@@ -51,6 +51,7 @@ const updateUser=async (req:Request, res:Response , next:NextFunction)=>{
         }
         else{
             user.name=req.body.name;
+            user.email=req.body.email;
             await user.save();
             resp={status:"success",message:"User Updated",data:{}};
             res.send(resp);
