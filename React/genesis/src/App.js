@@ -3,8 +3,8 @@ import First from "./components/First";
 function App() {
   return (
     <div>
-      <First/>
-    <First/>
+      <First my="MY"/>
+    <First my="HER"/>
     </div>
   );
 }
