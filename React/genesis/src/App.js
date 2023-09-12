@@ -1,10 +1,13 @@
+import { useState } from "react";
 import First from "./components/First";
+import Drop from "./components/Second";
 
 function App() {
+  const[open , setopen] = useState(false);
   return (
     <div>
-      <First my="MY"/>
-    <First my="HER"/>
+      <Drop />
+      {open?<First my="MY"/>:null}
     </div>
   );
 }
