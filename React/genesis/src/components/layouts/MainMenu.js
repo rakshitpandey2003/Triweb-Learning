@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
 function MainMenu(){
 return <header>
-    <a href="/">home </a>
-    <a href="/about">about </a>
-    <a href="/contact">contact </a>
+    <nav>
+        <ul>
+            <li><Link to='/'>home</Link></li>
+            <li><Link to='/about'>about</Link></li>
+            <li><Link to='/contact'>contact</Link></li>
+        </ul>
+    </nav>
 </header>
 }
 export default MainMenu;
