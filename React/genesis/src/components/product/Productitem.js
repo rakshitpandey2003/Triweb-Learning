@@ -1,5 +1,5 @@
 import Wrapper from "../layouts/Wrapper";
-import styles from "./Product.module.css";
+import styles from "./Productitem.module.css";
 function Productitem(props){
     return <li key = {props.item.id}>
         <Wrapper>
