@@ -1,25 +1,26 @@
+import Productlist from "../components/product/Productlist";
 function Product(){
-    let Products = [
+    let products = [
         {
             id:"p1",
-            product:"lifeboii",
-            image:"",
+            product_name:"lifeboii",
+            image:"/images/lifeboii.jpeg",
             description:"can kill",
             price : "20"
         },
         {
             id:"p2",
-            product:"harpic",
-            image:"",
+            product_name:"harpic",
+            image:"/images/harpic.jpeg",
             description:"aankhe dholo guys",
             price : "60"
         }
 
     ]
     return <div>
-            <ul>{Products.map((item)=>{
-                return <li key={item.id}>{item.product}</li>;
-            })}</ul>
+            <ul>
+            <Productlist products = {products}/>
+            </ul>
     </div>
 }
 

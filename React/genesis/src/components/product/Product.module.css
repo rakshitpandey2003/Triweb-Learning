@@ -1,0 +1,33 @@
+.image img{
+    height: 150px;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 6px black;
+}
+.content h2{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.content p{
+    font-size: 17px;
+    color: rgb(172 , 12 , 12);
+    font-weight: bolder;
+}
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn button{
+    background-color: rgb(224 , 104 , 104);
+    color: rgb(162, 72, 16);
+    border-radius: 6px;
+    border: none;
+    height: 28px;
+}
+
+.btn button:hover{
+    color: bisque;
+    border: 2px rgb(162, 72, 16);
+}
