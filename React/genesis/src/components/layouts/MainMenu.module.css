@@ -1,0 +1,33 @@
+/* Header container */
+.header {
+    background-color: #cfa4a4;
+    padding: 15px 0;
+  }
+  
+  /* Navigation menu */
+  .header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Navigation menu items */
+  .header nav ul li {
+    display: inline;
+    
+    margin: 0 20px;
+  }
+  
+  /* Navigation links */
+  .header nav ul li a {
+    text-decoration: none;
+    color: #df3c3c;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .header nav ul li a:hover {
+    color: #7d5454;
+  }
