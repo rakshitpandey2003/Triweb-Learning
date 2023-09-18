@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Product from "./pages/Product";
 import Layout from "./components/layouts/Layout";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return <Layout>
@@ -12,6 +13,7 @@ function App() {
     <Route path='/about' element={<About/>}></Route>
     <Route path='/contact' element={<Contact/>}></Route>
     <Route path='/product' element={<Product/>}></Route>
+    <Route path='/product/add' element={<AddProduct/>}></Route>
     </Routes>
   </Layout>
 }
