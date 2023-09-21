@@ -31,16 +31,22 @@ const createQuiz=async (req:Request, res:Response, next:NextFunction) =>{
 
 const getQuiz=async (req:Request, res:Response, next:NextFunction) =>{
     try {
-        const quizId=req.params.quizId;
-        const quiz=await Quiz.findById(quizId,{name:1, questions_list:1, answers:1, created_by:1});
+        let quiz;
+        if(!!req.params.quizId){
+            const quizId=req.params.quizId;
+            quiz=await Quiz.findById(quizId,{name:1, questions_list:1, answers:1, created_by:1});
+            if(quiz && req.userId!==quiz.created_by.toString()){
+                const err=new ProjectError("You are not Authorized");
+                err.statusCode=403;
+                throw err;
+            } 
+        }
+        else{
+            quiz=await Quiz.find({userId:req.params.userId});
+        }
         if(!quiz){
             const err=new ProjectError("Quiz not found");
             err.statusCode=404;
-            throw err;
-        }
-        if(req.userId!==quiz.created_by.toString()){
-            const err=new ProjectError("You are not Authorized");
-            err.statusCode=403;
             throw err;
         }
         const resp:ReturnResponse={status:"success", message:"Quiz retrieved successfully", data:{quiz}};
