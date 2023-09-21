@@ -35,3 +35,22 @@
   .header nav ul li a:hover {
     color: #7d5454;
   }
+
+  .badge {
+    background-color: #6709da;
+    color: white;
+    border-radius: 12px;
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .favouriteCount{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 5px
+  }
