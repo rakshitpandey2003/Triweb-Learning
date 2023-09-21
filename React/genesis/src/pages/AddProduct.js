@@ -1,6 +1,7 @@
 import AddProductForm from "../components/product/AddProductForm";
-
+import {useNavigate} from "react-router-dom";
 function AddProduct(){
+    const navigate = useNavigate();
     function addProductHandler(newProduct) {
         fetch("http://localhost:3002/product", {
             method: "POST",
@@ -8,19 +9,8 @@ function AddProduct(){
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        }).then(response=>navigate("/" , {replace:true}))
+        .catch(err=>console.log(err));
     }
     return <AddProductForm addProductHandler = {addProductHandler}/>
 }
