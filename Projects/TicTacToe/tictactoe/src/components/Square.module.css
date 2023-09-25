@@ -1,8 +1,32 @@
+/* Square.module.css */
+.x-turn{
+    color: #3498db;
+}
+.o-turn{
+    color: rgb(236, 127, 127);
+}
 .squares {
-    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     height: 100px;
-    width: 100%;
+    width: 100px;
     display: flex;
     justify-content: center;
-    align-items: center; 
-}
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+  }
+  
+  .squares:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly less opaque on hover */
+    border: 1px solid #aaa; /* Lighter border on hover */
+    color: #3498db; /* Change text color on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  h5 {
+    color: #333; /* Dark text color */
+  }

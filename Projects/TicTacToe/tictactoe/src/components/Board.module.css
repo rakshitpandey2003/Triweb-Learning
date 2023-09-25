@@ -1,11 +1,49 @@
-.row {
+/* Board.module.css */
+
+.board {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    transition: background 0.5s ease, color 0.3s ease; /* Added color transition */
+  }
+  
+  .board:hover {
+    background: rgba(255, 255, 255, 0.9); /* Slightly brighter on hover */
+    color: #2980b9; /* Change text color on hover */
+  }
+  
+  h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+  }
+  
+  .row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.board {
-    margin: 20px;
-    width: 30%;
-
-}
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
