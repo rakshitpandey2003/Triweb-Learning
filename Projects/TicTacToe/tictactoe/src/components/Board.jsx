@@ -6,7 +6,9 @@ const Board = () => {
   const [isXTurn, setIsXTurn] = useState(true);
 
   const handleClick = (index) => {
-
+    if (state[index] !== null) {
+      return;
+    }
     const copyState = [...state];
     copyState[index] = isXTurn ? "X" : "O";
     setState(copyState);
