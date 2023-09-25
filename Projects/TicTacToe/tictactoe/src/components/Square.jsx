@@ -1,10 +1,10 @@
 import React from "react";
 import Styles from "./Square.module.css";
 
-const Square = () => {
+const Square = (props) => {
   return (
-    <div className={Styles.squares}>
-      <h5>X</h5>
+    <div className={Styles.squares} onClick={props.onClick}>
+      <h5>{props.value}</h5>
     </div>
   );
 };
