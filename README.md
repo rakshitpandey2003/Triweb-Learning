@@ -1,3 +1,5 @@
+<img src = "https://github.com/rakshitpandey2003/Triweb-Learning/assets/110710174/4525ef93-d28c-4d7b-ad6f-8c7c66ce780f">
+
 # Embarking on My Journey of Learning
 
 Welcome to my personal repository, a sanctuary where my passion for growth and exploration in the realm of software development flourishes. Within these digital walls, you'll uncover a compendium of projects, exercises, and experiments spanning Git, HTML, CSS, JavaScript, and MySQL.
@@ -29,78 +31,46 @@ Here, traverse the corridors of the **Triweb-Learning** fortress, wherein the tr
 
 - 📂 **Triweb-Learning**
   - 📂 **HTML**
-    - A repository of HTML-powered projects.
+    - A repository of HTML-powered projects.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/HTML/README.md)
 
   - 📂 **CSS**
-    - Where HTML transforms through the magic of CSS.
+    - Where HTML transforms through the magic of CSS.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/CSS/README.md)
   
   - 📂 **JavaScript**
-    - A trove of JavaScript practice files.
+    - A trove of JavaScript practice files.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/Javascript/README.md)
   
   - 📂 **Projects**
-    - Home to foundational HTML, CSS, and JavaScript projects.
+    - Home to foundational HTML, CSS, and JavaScript projects.[README.md]()
   
   - 📂 **MySQL**
-    - Where the intricacies of MySQL queries are unveiled.
-
+    - Where the intricacies of MySQL queries are unveiled.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/MySQL/README.md)
+      
+  - 📂 **MongoDB**
+    - Contains practice files of MongoDB.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/MongoDB/README.md)
+      
   - 📂 **ES6**
-    - Diving into the marvels of modern ES6.
+    - Diving into the marvels of modern ES6.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/Es6/README.md)
+      
   - 📂 **NodeJS**
-    - Contains practice files of Node.js.
-## A Symphony of HTML
-
-Within the realm of `HTML`, embark on odysseys of creation. Encounter projects such as:
-
-- `Form.html`: A humble yet impactful registration form.
-- `TimeTable.html`: A personal chronicle manifested as a timetable.
-
-## Elevating with CSS
-
-`CSS`, residing in its domain, elevates the visual narrative of HTML, creating a symphony of design.
-
-## The Alchemy of JavaScript
-
-In the sanctuary of `JavaScript`, undertake a journey of enlightenment, uncovering the mysteries of code. Behold the fruits of labor:
-
-- `Day1.html` and `Day1.js`: An interactive tapestry where text and images dance harmoniously, joined by a text-prompting incantation.
-- `Day6.js` and `Day7.js`: Delve into the realm of Date methods.
-- `Day5.js`: Navigate the realm of JavaScript's array methods.
-- `Day8.js`: A dance with Regular Expressions and their mystical arts.
-- `Day12.js`: A symposium on the craft of iterators and generators.
-- `Day11.js`: Journey through the intricate paths of promise chaining.
-
-## Pioneering Projects
-
-The realm of `Projects` heralds the dawn of creative endeavor. Shape visions into reality:
-
-- `BasicJSProject`: Interactive boxes that weave tales as they traverse specific points, exploring DOM manipulation and interactivity.
-- `HTML-CSS-JS-Project`: Strengthen forms with validations and depth.
-
-## The MySQL Odyssey
-
-The `MySQL` arena unveils the grand tapestry of database exploration:
-
-- `Part2.txt`: The birth of tables, the querying of databases, and the crafting of the SQL symphony.
-- `Part3.txt`: A saga of Create, Read, Update, and Delete operations.
-- `Part6.txt`: Journey through the intricacies of SQL joins.
-
-## The Modern JavaScript Saga
-
-The `ES6` realm weaves a tapestry with the threads of modern JavaScript concepts:
-
-- `math.js`: A canvas adorned with the artistry of novel mathematical methods.
-- `spread.js`: The eloquence of the spread operator, woven into code's fabric.
-- `propertyShorthand.js`: The shorthand symphony for expressing object beauty.
-
-## NodeJS Practice
-In the `NodeJS` directory, I've practiced creating routes, handling requests, connecting to databases and performing CRUD operations. 
-I've used Postman - a popular collaboration platform for API development that simplifies the process of building, testing, and documenting APIs. Some of the examples include:
-
-- `calculator.js`: Demonstrating the methods to create routers and controllers and perform mathematical operations.
-- `user.js`: Demonstrating the CRUD operations performed with the help of sequelize library.
-
+    - Contains practice files of Node.js.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/NodeJS/README.md)
+      
+  - 📂 **TypeScript**
+    - Contains practice files of Typescript.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/Typescript/README.md)
+      
+  - 📂 **React**
+    - Contains practice files of Reactjs.[README.md](https://github.com/rakshitpandey2003/Triweb-Learning/blob/main/React/genesis/README.md)
+  
 Voyage through each chapter, unearthing the troves of code and projects nurtured!
+Feel free to explore each directory to see the code and projects I've been working on!
+
+### Connect with Me
+
+- [Linkedin](https://www.linkedin.com/in/rakshit-pandey-58ba98227/)
+- [Twitter](https://twitter.com/RakshitPan87320)
+
 
 ---
 
-Feel free to clone or fork this repository, embarking on your own voyage of exploration and learning. Your contributions, suggestions, and enhancements are warmly encouraged—embark on this journey alongside me by creating your pull requests.
+Feel free to clone or fork this repository to explore the code and projects. If you have any suggestions or improvements, feel free to contribute by creating pull requests.
+
+Happy coding!
