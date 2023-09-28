@@ -6,12 +6,15 @@ Welcome to the HTML directory! Here, you'll find a collection of HTML projects a
 
 ### 1. Form.html
 
+<img width="400" alt="Screenshot 2023-09-28 at 3 43 05 PM" src="https://github.com/rakshitpandey2003/Triweb-Learning/assets/110710174/4c3ec19b-5717-4d61-bad4-98b64c563117">
 
 
 **Description:**  
 Form.html is a simple registration form. It demonstrates the basics of HTML form elements, including input fields, labels, and buttons. Use it as a starting point for your own form projects or customize it to suit your needs.
 
-### 2. TimeTable.html
+### 2. TimeTable.
+<img width="810" alt="Screenshot 2023-09-28 at 3 43 44 PM" src="https://github.com/rakshitpandey2003/Triweb-Learning/assets/110710174/1bc2b4db-ae16-4ec2-a47e-d6efc2f4ac7c">
+html
 
 
 
