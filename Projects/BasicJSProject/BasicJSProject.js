@@ -17,11 +17,8 @@ const btn_move_to_yellow = document.getElementById('btn_move_to_yellow');
 function addUserToProject(){
     if(my_user == null){
         my_user = document.createElement("div");
-        // add some class for styling
         my_user.className = "my_user";
-        // add id for better control from anywhere
         my_user.setAttribute("id","my_user");
-        //value from input box
         my_user.innerHTML = pro_user.value;
 
         pro_user.disabled = true;
