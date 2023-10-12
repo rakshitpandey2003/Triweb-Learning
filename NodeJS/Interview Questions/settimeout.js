@@ -7,4 +7,7 @@ setImmediate(()=>{
 setTimeout(() => {
     add("SetTimeout",3,4);
 }, 0);
+process.nextTick(()=>{
+    add("Process NextTick",4,5);
+});
 add("Direct",1,2);
